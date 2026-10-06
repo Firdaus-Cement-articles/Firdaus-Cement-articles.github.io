@@ -605,7 +605,7 @@ document.getElementById("quote").addEventListener("submit", e => {
 
 // logo watermark on every photo block
 document.querySelectorAll(".pcard > img").forEach(im => { const w=document.createElement("div"); w.className="pc-img"; im.replaceWith(w); w.appendChild(im); });
-document.querySelectorAll(".hero-img, .about-img, .bw-slide, .ggrid figure, .pp-main, .pc-slider, .pc-img").forEach(el => el.classList.add("wmk"));
+document.querySelectorAll(".about-img, .bw-slide, .ggrid figure, .pp-main, .pc-slider, .pc-img").forEach(el => el.classList.add("wmk"));
 </script>
 </body>
 </html>
