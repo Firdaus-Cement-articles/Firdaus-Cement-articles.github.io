@@ -247,6 +247,14 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 .wmk::after{content:"";position:absolute;inset:0;background:url(img/02.webp) center/min(46%,260px) auto no-repeat;opacity:.42;pointer-events:none;z-index:1}
 .pc-img{display:block}
 .pc-count,.bw-count,.bw-slide figcaption,.ggrid figcaption{z-index:2}
+
+/* slow zoom/pan on every photo */
+@keyframes kb{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.14) translate(-2.5%,-2%)}}
+.hero-img,.about-img,.ggrid figure,.pc-img,.bw-slide{overflow:hidden}
+.hero-img img,.about-img img,.ggrid img,.pc-img img,.bw-slide img{animation:kb 9s ease-in-out infinite alternate;will-change:transform}
+.ggrid figure:nth-child(2n) img,.pcard:nth-child(2n) .pc-img img,.bw-slide:nth-child(2n) img{animation-delay:-4.5s}
+.ggrid figure:nth-child(3n) img,.pcard:nth-child(3n) .pc-img img{animation-direction:alternate-reverse}
+@media (prefers-reduced-motion:reduce){.hero-img img,.about-img img,.ggrid img,.pc-img img,.bw-slide img{animation:none}}
 </style>
 </head>
 <body>
